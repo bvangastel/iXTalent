@@ -31,17 +31,19 @@ jobs:
         run: |
           pwd
           ls -la
-          echo "package.json:"
           cat package.json
+
+      - name: Force public npm registry
+        run: |
+          npm config set registry https://registry.npmjs.org/
 
       - name: Install dependencies
         run: |
-          npm install --include=dev
+          npm install --package-lock=false --no-audit --no-fund --legacy-peer-deps
 
       - name: Check Vite installation
         run: |
-          npm list vite
-          ls -la node_modules/.bin | grep vite || true
+          npx vite --version
 
       - name: Build app
         run: |
