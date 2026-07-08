@@ -1,0 +1,6 @@
+{
+  "name": "iXTalent",
+  "description": "Interactief prototype voor talentontwikkeling en ontwikkelingsgerichte teamindeling bij SV Brainport United.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
