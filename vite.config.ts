@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Gebruik relatieve asset-paden zodat de app ook werkt op GitHub Pages
+    // wanneer de site onder /<repositorynaam>/ draait.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
